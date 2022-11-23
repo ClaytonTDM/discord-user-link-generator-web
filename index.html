@@ -1,0 +1,19 @@
+<script>
+if (prompt('Would you like to create a Discord user link? Please type "yes" or "no". Any invalid answer will assume you answered yes.') == 'no') {
+  history.back();
+} else {
+  if (prompt('Do you have the Discord desktop app installed? Please type "yes" or "no". Any invalid answer will assume you answered no.') == 'yes') {
+    if (prompt('Would you like to copy the link? Please type "yes" or "no". Any invalid answer will assume you answered no.') == 'yes') {
+      alert('discord://-/users/' + prompt('What is your friends user ID?'));
+    } else {
+      document.location.replace('discord://-/users/' + prompt('What is your friends user ID?'));
+    }
+  } else {
+    if (prompt('Would you like to copy the link? Please type "yes" or "no". Any invalid answer will assume you answered no.') == 'yes') {
+      alert('https://discord.com/users/' + prompt('What is your friends user ID?'));
+    } else {
+      document.location.replace('https://discord.com/users/' + prompt('What is your friends user ID?'));
+    }
+  }
+}
+</script>
